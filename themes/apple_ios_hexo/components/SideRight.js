@@ -27,7 +27,6 @@ export default function SideRight(props) {
             <Catalog toc={post.toc} />
           </Card>
         )}
-        {slot}
       </div>
       {!post && <InfoCard {...props} />}
       {CONFIG_APPLE_IOS_HEXO.WIDGET_ANALYTICS && <AnalyticsCard {...props} />}
@@ -53,6 +52,7 @@ export default function SideRight(props) {
           <LatestPostsGroup posts={latestPosts} />
         </Card>
       )}
+      <div className="sticky top-20">{slot}</div>
     </div>
   )
 }

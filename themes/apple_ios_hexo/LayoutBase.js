@@ -10,7 +10,7 @@ import FloatDarkModeButton from './components/FloatDarkModeButton'
 import Live2D from '@/components/Live2D'
 import LoadingCover from './components/LoadingCover'
 import { useGlobal } from '@/lib/global'
-// import FacebookPage from '@/components/FacebookFanPage'
+import FacebookPage from '@/components/FacebookFanPage'
 
 /**
  * 基础布局 采用左右两侧布局，移动端使用顶部导航栏
@@ -24,7 +24,7 @@ const LayoutBase = props => {
   // const [percent, changePercent] = useState(0) // 页面阅读百分比
   const rightAreaSlot = (
     <>
-      {/* <FacebookPage /> */}
+      <FacebookPage />
       <Live2D />
     </>
   )
