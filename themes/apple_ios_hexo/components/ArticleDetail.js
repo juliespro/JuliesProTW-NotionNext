@@ -25,25 +25,25 @@ import ArticleRecommend from './ArticleRecommend'
  */
 export default function ArticleDetail(props) {
   const { post } = props
-  const zoom =
-    typeof window !== 'undefined' &&
-    mediumZoom({
-      container: '.notion-viewport',
-      background: 'rgba(0, 0, 0, 0.2)',
-      margin: getMediumZoomMargin()
-    })
-  const zoomRef = useRef(zoom ? zoom.clone() : null)
+  // const zoom =
+  //   typeof window !== 'undefined' &&
+  //   mediumZoom({
+  //     container: '.notion-viewport',
+  //     background: 'rgba(0, 0, 0, 0.2)',
+  //     margin: getMediumZoomMargin()
+  //   })
+  // const zoomRef = useRef(zoom ? zoom.clone() : null)
 
-  useEffect(() => {
-    // 将所有container下的所有图片添加medium-zoom
-    const container = document?.getElementById('container')
-    const imgList = container?.getElementsByTagName('img')
-    if (imgList && zoomRef.current) {
-      for (let i = 0; i < imgList.length; i++) {
-        zoomRef.current.attach(imgList[i])
-      }
-    }
-  })
+  // useEffect(() => {
+  // 将所有container下的所有图片添加medium-zoom
+  // const container = document?.getElementById('container')
+  // const imgList = container?.getElementsByTagName('img')
+  // if (imgList && zoomRef.current) {
+  //   for (let i = 0; i < imgList.length; i++) {
+  //     zoomRef.current.attach(imgList[i])
+  //   }
+  // }
+  // })
 
   return (
     <div

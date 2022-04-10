@@ -50,8 +50,6 @@ const LayoutBase = props => {
     return () => document.removeEventListener('scroll', scrollListener)
   }, [show])
 
-  console.log(props.post)
-
   return (
     <div className="bg-white dark:bg-black">
       <CommonHead meta={meta} />
