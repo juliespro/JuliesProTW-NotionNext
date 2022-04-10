@@ -72,7 +72,7 @@ const BlogPostListScroll = ({
           <div className="py-6">
             <div className="flex flex-wrap space-y-1 lg:space-y-4 p-2 dark:text-white text-4xl">
               <h1>
-                <i class="fas fa-folder mr-1"></i>
+                <i className="fas fa-folder mr-1"></i>
                 &nbsp;
                 {currentCategory}
               </h1>

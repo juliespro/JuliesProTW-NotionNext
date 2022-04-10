@@ -21,13 +21,13 @@ export default function SideRight(props) {
 
   return (
     <div className={'lg:w-80 p-2 space-y-4'}>
-      <div className="sticky top-20">
-        {post && post.toc && (
+      {post && post.toc && (
+        <div className="sticky top-20">
           <Card>
             <Catalog toc={post.toc} />
           </Card>
-        )}
-      </div>
+        </div>
+      )}
       {!post && <InfoCard {...props} />}
       {CONFIG_APPLE_IOS_HEXO.WIDGET_ANALYTICS && <AnalyticsCard {...props} />}
 
@@ -52,7 +52,7 @@ export default function SideRight(props) {
           <LatestPostsGroup posts={latestPosts} />
         </Card>
       )}
-      <div className="sticky top-20">{slot}</div>
+      {!post && <div className="sticky top-20">{slot}</div>}
     </div>
   )
 }

@@ -50,6 +50,8 @@ const LayoutBase = props => {
     return () => document.removeEventListener('scroll', scrollListener)
   }, [show])
 
+  console.log(props.post)
+
   return (
     <div className="bg-white dark:bg-black">
       <CommonHead meta={meta} />
@@ -61,12 +63,16 @@ const LayoutBase = props => {
       <main id="wrapper" className="w-full md:py-20 min-h-screen">
         <div
           id="container-inner"
-          className="pt-0 w-full mx-auto lg:flex justify-center md:space-x-4"
+          className={
+            props.post
+              ? 'pt-0 w-full mx-auto flex lg:flex-row-reverse justify-center md:space-x-4 flex-col-reverse'
+              : 'pt-0 w-full mx-auto flex lg:flex-row-reverse justify-center md:space-x-4 flex-col'
+          }
         >
-          <SideRight {...props} slot={rightAreaSlot} />
           <div className="flex-grow w-full lg:max-w-4xl p-2">
             {onLoading ? <LoadingCover /> : children}
           </div>
+          <SideRight {...props} slot={rightAreaSlot} />
         </div>
       </main>
 
