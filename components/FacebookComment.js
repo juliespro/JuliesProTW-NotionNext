@@ -1,11 +1,11 @@
 import BLOG from '@/blog.config'
-import { FacebookProvider, Comments } from 'react-facebook'
+import { FacebookProvider } from 'react-facebook'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 
 const FacbookComment = ({ isDarkMode }) => {
   const theme = isDarkMode ? 'dark' : 'light'
-  const { asPath, pathname } = useRouter()
+  const { asPath } = useRouter()
   const href = BLOG.LINK + asPath
 
   useEffect(() => {
