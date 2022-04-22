@@ -29,6 +29,18 @@ body::-webkit-scrollbar-thumb {
   left: 50%;
   transform: translateX(-50%);
 }
+/* Facebook Page 側欄置中 */
+
+/* For componets/YouTube.js  */
+.video-player > div {
+  width: 100%;
+  height: 100%;
+}
+.video-player > .yt-anchor {
+  position: relative;
+  height: 0px;
+}
+/* For componets/YouTube.js  */
 
 .wrapper {
   min-height: 100vh;

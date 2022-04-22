@@ -1,4 +1,5 @@
 import Comment from '@/components/Comment'
+import { YouTubePlayer } from '@/components/YouTubePlayer'
 import mediumZoom from 'medium-zoom'
 import 'prismjs'
 import 'prismjs/components/prism-bash'
@@ -57,6 +58,7 @@ export default function ArticleDetail(props) {
       >
         {/* Notion文章主体 */}
         <section id="notion-article" className="px-2">
+          <YouTubePlayer {...props} />
           {post.blockMap && (
             <NotionRenderer
               recordMap={post.blockMap}
